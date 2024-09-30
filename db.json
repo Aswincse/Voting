@@ -1,0 +1,44 @@
+{
+  "admins": [
+    {
+      "id": "1",
+      "email": "admin@g",
+      "password": "123",
+      "role": "admin"
+    }
+  ],
+  "users": [
+    {
+      "id": "c469",
+      "firstName": "ASWIN",
+      "lastName": "s",
+      "email": "as@g",
+      "password": "123",
+      "role": "user"
+    }
+  ],
+  "elections": [
+    {
+      "id": "6c12",
+      "name": "adivote",
+      "date": "2024-10-03",
+      "parties": [
+        {
+          "name": "adip",
+          "candidate": "adic"
+        },
+        {
+          "name": "adi2p",
+          "candidate": "adi2def"
+        },
+        {
+          "name": "er3",
+          "candidate": "er3i"
+        }
+      ],
+      "participants": [
+        "c469"
+      ]
+    }
+  ]
+}
