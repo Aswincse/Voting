@@ -30,7 +30,7 @@ const LoginPage = () => {
         // Successful login
         setPopupMessage('Login Successful!');
         localStorage.setItem('user', JSON.stringify(user)); // Save user/admin info in local storage
-        navigate(isAdmin ? '/admin' : '/user'); // Redirect to respective dashboard
+        navigate(isAdmin ? '/admin' : '/userdashboard'); // Redirect to UserDashboard for users
       } else {
         // Invalid email or password
         setPopupMessage('Login Failed: Invalid email or password.');

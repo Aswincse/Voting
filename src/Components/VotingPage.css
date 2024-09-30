@@ -1,0 +1,22 @@
+.voting-page {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .party-option {
+    margin-bottom: 10px;
+  }
+  
+  .vote-button {
+    background-color: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .vote-button:hover {
+    background-color: darkblue;
+  }
+  

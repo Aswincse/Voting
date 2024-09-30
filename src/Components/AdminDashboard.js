@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './AdminDashboard.css'; // Include the new CSS file for styling
+import './AdminDashboard.css';
 
 const AdminDashboard = () => {
   const [elections, setElections] = useState([]);
@@ -42,6 +42,9 @@ const AdminDashboard = () => {
           </li>
           <li className="menu-item">
             <Link to="/create-user" className="menu-link">Create User</Link>
+          </li>
+          <li className="menu-item">
+            <Link to="/view-results" className="menu-link">View Election Results</Link>
           </li>
         </ul>
       </aside>

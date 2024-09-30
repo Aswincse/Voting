@@ -1,0 +1,30 @@
+.user-dashboard {
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .election-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .election-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .vote-button {
+    background-color: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .vote-button:hover {
+    background-color: darkgreen;
+  }
+  

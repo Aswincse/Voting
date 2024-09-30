@@ -25,20 +25,32 @@
       "parties": [
         {
           "name": "adip",
-          "candidate": "adic"
+          "candidate": "adic",
+          "voteCount": 0
         },
         {
           "name": "adi2p",
-          "candidate": "adi2def"
+          "candidate": "adi2def",
+          "voteCount": 0
         },
         {
           "name": "er3",
-          "candidate": "er3i"
+          "candidate": "er3i",
+          "voteCount": 1
         }
       ],
       "participants": [
         "c469"
       ]
+    }
+  ],
+  "votes": [
+    {
+      "id": "a5fd",
+      "userId": "c469",
+      "electionId": "6c12",
+      "party": "er3",
+      "candidate": "er3i"
     }
   ]
 }
