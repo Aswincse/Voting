@@ -35,6 +35,7 @@ const UserDashboard = () => {
   const handleVoteNow = (electionId) => {
     navigate(`/vote/${electionId}`); // Navigate to VotingPage with electionId
   };
+  
 
   return (
     <div className="user-dashboard">
