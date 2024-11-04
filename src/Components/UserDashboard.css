@@ -1,4 +1,4 @@
-.user-dashboard {
+  /* .user-dashboard {
     padding: 20px;
     font-family: 'Poppins', sans-serif;
   }
@@ -27,4 +27,55 @@
   .vote-button:hover {
     background-color: darkgreen;
   }
-  
+   */
+
+ /* UserDashboard.css */
+.user-dashboard {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  place-content: center;
+  flex-direction: column;
+}
+
+.election-container {
+  display: flex;
+  justify-content: center;
+  place-content: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.election-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-left: 400px;
+  margin-bottom: 60px;
+  width: 30px; /* Adjust width based on how many cards you want in a row */
+  box-shadow: 5px 7px 9px rgba(0, 0, 0, 0.7);
+  transition: transform 0.2s;
+}
+
+.election-card:hover {
+  transform: translateY(-5px);
+}
+
+.vote-button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 20px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.vote-button:hover {
+  background-color: green;
+}
