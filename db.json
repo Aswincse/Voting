@@ -17,12 +17,15 @@
       "role": "user"
     },
     {
-      "id": "2b36",
-      "firstName": "harish",
-      "lastName": "s",
+      "id": "3faa",
+      "firstName": "Harish",
+      "lastName": "Rag",
+      "age": "20",
+      "gender": "male",
+      "voterId": "VOTER123",
+      "mobile": "456278888",
       "email": "ha@g",
-      "password": "123",
-      "role": "user"
+      "password": "123"
     }
   ],
   "elections": [
@@ -48,28 +51,7 @@
         }
       ],
       "participants": [
-        "c469",
-        "2b36"
-      ]
-    },
-    {
-      "id": "f700",
-      "name": "mp election",
-      "date": "2024-10-01",
-      "parties": [
-        {
-          "name": "bot party",
-          "candidate": "bot",
-          "voteCount": 1
-        },
-        {
-          "name": "pro party",
-          "candidate": "pro"
-        }
-      ],
-      "participants": [
-        "c469",
-        "2b36"
+        "c469"
       ]
     }
   ],
@@ -80,13 +62,6 @@
       "electionId": "6c12",
       "party": "er3",
       "candidate": "er3i"
-    },
-    {
-      "id": "7e24",
-      "userId": "2b36",
-      "electionId": "f700",
-      "party": "bot party",
-      "candidate": "bot"
     }
   ]
 }

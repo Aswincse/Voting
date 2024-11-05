@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import './VotingPage.css';
 
 const VotingPage = () => {
   const [election, setElection] = useState(null);
@@ -59,7 +60,7 @@ const VotingPage = () => {
         parties: updatedParties,
       });
 
-      // Record the vote in the `/votes` endpoint
+      // Record the vote in the /votes endpoint
       await axios.post('http://localhost:8080/votes', {
         userId: user.id,
         electionId: electionId,
@@ -81,31 +82,33 @@ const VotingPage = () => {
   };
 
   return (
-    <div>
-      <h2>Voting Page</h2>
-      {election ? (
-        <div>
-          <h3>{election.name}</h3>
-          <p>Date: {election.date}</p>
-          <h4>Parties:</h4>
-          {hasVoted() ? (
-            <p>Already voted, thank you!</p>
-          ) : (
-            <ul>
-              {election.parties.map((party) => (
-                <li key={party.name}>
-                  <strong>{party.name}</strong> - Candidate: {party.candidate}
-                  <button onClick={() => handleVote(party.name, party.candidate)}>
-                    Vote
-                  </button>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      ) : (
-        <p>Loading election...</p>
-      )}
+    <div className="voting-page-body09">
+      <div className="voting-page-container09">
+        <h2 className="voting-page-title09">Voting Page</h2>
+        {election ? (
+          <div>
+            <h3>{election.name}</h3>
+            <p>Date: {election.date}</p>
+            <h4>Parties:</h4>
+            {hasVoted() ? (
+              <p>Already voted, thank you!</p>
+            ) : (
+              <ul className="party-list09">
+                {election.parties.map((party) => (
+                  <li key={party.name} className="party-option09">
+                    <strong>{party.name}</strong> - Candidate: {party.candidate}
+                    <button onClick={() => handleVote(party.name, party.candidate)} className="vote-button09">
+                      Vote
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ) : (
+          <p>Loading election...</p>
+        )}
+      </div>
     </div>
   );
 };

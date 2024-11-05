@@ -1,106 +1,4 @@
-/* src/Components/LoginPage.css
-
-body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f9;
-  }
-  
-  .login-page {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #e0e0e0;
-  }
-  
-  .login-container {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .login-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-input {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    transition: border-color 0.3s ease;
-  }
-  
-  .login-input:focus {
-    border-color: #4caf50;
-    outline: none;
-    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
-  }
-  
-  .login-button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .login-button:hover {
-    background-color: #45a049;
-  }
-  
-  .toggle-option {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .login-toggle-link {
-    color: #4caf50;
-    cursor: pointer;
-    font-size: 14px;
-    text-decoration: underline;
-  }
-  
-  .login-toggle-link:hover {
-    color: #388e3c;
-  }
-  
-  @media (max-width: 768px) {
-    .login-container {
-      padding: 20px;
-      max-width: 90%;
-    }
-  
-    .login-title {
-      font-size: 20px;
-    }
-  
-    .login-button {
-      font-size: 14px;
-    }
-  }
-   */
-
-
-.loginbody {
+.loginbody05 {
   margin: 0;
   font-family: 'Asap', sans-serif;
   height: 95%;
@@ -110,7 +8,7 @@ body {
   background-color: rgb(244, 91, 105);
 }    
 
-.login-wrapper {
+.login-wrapper05 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -118,7 +16,7 @@ body {
   height: 99vh;
 }
 
-.login-container {
+.login-container05 {
   background-color: white;
   padding: 0px 30px;
   border-radius: 10px;
@@ -128,7 +26,7 @@ body {
   height: 250px;
 }
 
-.login {
+.login05 {
   overflow: hidden;
   background-color: white;
   padding: 40px 30px 30px 30px;
@@ -138,16 +36,15 @@ body {
   width: 400px;
   transform: translate(-50%, -26%);
   transition: transform 300ms, box-shadow 300ms;
-  box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2); /* Equivalent of $greenSeaweed */
+  box-shadow: 5px 10px 10px rgba(2, 128, 144, 0.2); 
   
   display: flex;
   place-items: center;
-  /* Decorative elements */
   position: relative;
 }
 
-.login::before,
-.login::after {
+.login05::before,
+.login05::after {
   content: '';
   position: absolute;
   width: 600px;
@@ -159,21 +56,21 @@ body {
   z-index: -1;
 }
 
-.login::before {
+.login05::before {
   left: 40%;
   bottom: -90%;
-  background-color: rgba(69, 105, 144, 0.15); /* Equivalent of $blueQueen */
-  animation: wawes 6s infinite linear;
+  background-color: rgba(69, 105, 144, 0.15);
+  animation: wawes05 6s infinite linear;
 }
 
-.login::after {
+.login05::after {
   left: 55%;
   bottom: -125%;
-  background-color: rgba(2, 128, 144, 0.2); /* Equivalent of $greenSeaweed */
-  animation: wawes 7s infinite;
+  background-color: rgba(2, 128, 144, 0.2);
+  animation: wawes05 7s infinite;
 }
 
-.login > input {
+.login05 > input {
   font-family: 'Asap', sans-serif;
   display: block;
   border-radius: 5px;
@@ -183,9 +80,10 @@ body {
   border: none;
   padding: 10px;
   margin: 15px 0;
+  box-shadow: 8px 5px 10px rgba(2, 128, 144, 0.2);
 }
 
-.login > button {
+.login05 > button {
   font-family: 'Asap', sans-serif;
   cursor: pointer;
   color: #fff;
@@ -197,15 +95,15 @@ body {
   margin-top: 10px;
   margin-left: -5px;
   border-radius: 5px;
-  background-color: rgb(244, 91, 105); /* Equivalent of $redFire */
+  background-color: rgb(244, 91, 105);
   transition: background-color 300ms;
 }
 
-.login > button:hover {
-  background-color: rgb(220, 82, 95); /* Slightly darker version of $redFire */
+.login05 > button:hover {
+  background-color: rgb(220, 82, 95);
 }
 
-@keyframes wawes {
+@keyframes wawes05 {
   from {
     transform: rotate(0);
   }
@@ -214,35 +112,22 @@ body {
   }
 }
 
-a {
+a.toggle-link05 {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.6);
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  font-size: 12px;
-}
-
-input{
-  box-shadow: 8px 5px 10px rgba(2, 128, 144, 0.2);
-}
-
-.login-title,button{
-  text-align: center;
-}
-
-.toggle-option {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.toggle-link {
-  color: rgba(2, 128, 144,2);
-  cursor: pointer;
+  color: rgba(2, 128, 144, 2);
   font-size: 14px;
   text-decoration: underline;
 }
 
-.toggle-link:hover {
+a.toggle-link05:hover {
   color: rgb(220, 82, 95);
+}
+
+.login-title05, .login05 button {
+  text-align: center;
+}
+
+.toggle-option05 {
+  text-align: center;
+  margin-top: 20px;
 }
