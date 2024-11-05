@@ -16,19 +16,35 @@ const LoginPage = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
+      // Set the correct endpoint based on user type
       const endpoint = isAdmin ? 'http://localhost:8080/admins' : 'http://localhost:8080/users';
       const response = await axios.get(endpoint);
       const users = response.data;
+
+      // Debugging: Log the response data
+      console.log("Fetched users:", users);
+
+      // Check if user credentials are valid
       const user = users.find(u => u.email === email && u.password === password);
+
+      // Debugging: Log the found user
+      console.log("Logged-in user:", user);
 
       if (user) {
         setPopupMessage('Login Successful!');
-        localStorage.setItem('user', JSON.stringify(user));
-        navigate(isAdmin ? '/admin' : '/userdashboard');
+        localStorage.setItem('user', JSON.stringify(user)); // Store user data in local storage
+
+        // Navigate to the appropriate dashboard
+        if (isAdmin) {
+          navigate('/admin'); // Admin dashboard
+        } else {
+          navigate('/userdashboard'); // User dashboard
+        }
       } else {
         setPopupMessage('Login Failed: Invalid email or password.');
       }
     } catch (error) {
+      console.error("Error during login:", error);
       setPopupMessage('Login Failed: An error occurred. Please try again.');
     } finally {
       setPopupVisible(true);
@@ -63,7 +79,7 @@ const LoginPage = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <button type="submit">Login</button>
+            <button id='loginbut05' type="submit">Login</button>
             <div className="toggle-option05">
               <p onClick={toggleLoginType} className="login-toggle-link05">
                 {isAdmin ? 'Are you a user? Click here' : 'Are you an admin? Click here'}

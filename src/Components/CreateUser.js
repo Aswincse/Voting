@@ -25,8 +25,10 @@ const CreateUser = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      // Make a POST request to create the user
       await axios.post('http://localhost:8080/users', formData);
       setSuccess('User created successfully.');
+      // Reset form data after successful creation
       setFormData({
         firstName: '',
         lastName: '',
@@ -85,13 +87,7 @@ const CreateUser = () => {
             required
           />
         </div>
-        <div>
-          <label>Role:</label>
-          <select name="role" value={formData.role} onChange={handleChange}>
-            <option value="user">User</option>
-            <option value="admin">Admin</option>
-          </select>
-        </div>
+        {/* Removed the role selection dropdown */}
         <button type="submit">Create User</button>
       </form>
     </div>

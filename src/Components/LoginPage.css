@@ -83,7 +83,7 @@
   box-shadow: 8px 5px 10px rgba(2, 128, 144, 0.2);
 }
 
-.login05 > button {
+#loginbut05 {
   font-family: 'Asap', sans-serif;
   cursor: pointer;
   color: #fff;
@@ -127,7 +127,19 @@ a.toggle-link05:hover {
   text-align: center;
 }
 
-.toggle-option05 {
-  text-align: center;
-  margin-top: 20px;
+.login-toggle-link05{
+  cursor: pointer;
+  color: rgb(220, 82, 95);
+}
+.login-toggle-link05:hover{
+  cursor: pointer;
+  color: rgb(220, 82, 95);
+}
+.register-option05:hover{
+  cursor: pointer;
+  color: rgb(220, 82, 95);
+}
+.register-option05{
+  position: relative;
+  bottom: 35px;
 }

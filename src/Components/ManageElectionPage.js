@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams, useNavigate } from 'react-router-dom';
-import './ManageElectionPage.css'; // Link to the CSS file
+import './ManageElectionPage.css';
 
 const ManageElectionPage = () => {
   const { electionId } = useParams();
@@ -95,6 +95,15 @@ const ManageElectionPage = () => {
       }));
       setNewParty({ name: '', candidate: '' });
       setShowPartyFields(false);
+    }
+  };
+
+  const handleSelectAll = () => {
+    if (election.participants.length === users.length) {
+      setElection((prev) => ({ ...prev, participants: [] }));
+    } else {
+      const allUserIds = users.map(user => user.id);
+      setElection((prev) => ({ ...prev, participants: allUserIds }));
     }
   };
 
@@ -202,6 +211,9 @@ const ManageElectionPage = () => {
 
           <div className="input-group">
             <h3>Select Participants:</h3>
+            <button type="button" className="btn-select-all" onClick={handleSelectAll}>
+              {election.participants.length === users.length ? 'Deselect All' : 'Select All Users'}
+            </button>
             <table className="participants-table">
               <thead>
                 <tr>
