@@ -1,80 +1,158 @@
+/* src/Components/ManageElectionPage.css */
+
 .manage-election-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px; /* Padding around the container */
+  background-color: rgb(220, 82, 95); /* Light gray background */
 }
 
 .election-card {
-  background-color: white;
-  padding: 20px;
+  background-color: #fff; /* White background for the card */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px; /* Padding inside the card */
+  padding-right: 35px;
+  width: 100%; /* Full width */
+  max-width: 600px; /* Maximum width for the card */
+  border: 1px solid #ddd;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  position: relative; /* Set relative positioning for the wave animations */
+  z-index: 1; /* Ensure this content is above the wave animations */
+  overflow: hidden;
 }
 
+.election-card::before,
+.election-card::after {
+  content: '';
+  position: absolute;
+  width: 1400px;
+  height: 1400px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.election-card::before {
+  top: 20%;
+  left: 110%;
+  background-color: rgba(69, 105, 144, 0.3);
+  transform: translateX(-50%);
+  animation: form-waves 6s infinite linear;
+}
+
+.election-card::after {
+  top: 35%;
+  left: 125%;
+  background-color: rgba(2, 128, 144, 0.25);
+  transform: translateX(-50%);
+  animation: form-waves 7s infinite;
+}
+
+
 .header {
-  text-align: center;
-  color: #333;
+  text-align: center; /* Center the header */
+  color: #333; /* Darker color for the header */
+  margin-bottom: 20px; /* Space below the header */
 }
 
 .input-group {
-  margin-bottom: 15px;
+  margin-bottom: 15px; /* Space between input groups */
+}
+
+.label {
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 5px; /* Space below labels */
+  display: block; /* Ensure labels are on a new line */
 }
 
 .input-field {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding inside inputs */
+  margin-right: 50px;
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 5px; /* Rounded corners for inputs */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-.btn-add-party, .btn-save, .btn-delete {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
 
-.btn-add-party {
-  background-color: #5cb85c;
-  color: white;
-}
-
-.btn-save {
-  background-color: #007bff;
-  color: white;
-}
-
-.btn-delete {
-  background-color: #d9534f;
-  color: white;
+.input-field:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  outline: none; /* Remove default outline */
 }
 
 .participants-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
+  width: 103%; /* Full width for the table */
+  border-collapse: collapse; /* Collapse borders */
 }
 
-.participants-table th, .participants-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-}
-
-.error-message {
-  color: red;
-  text-align: center;
-}
-
-.party-input-group {
-  display: flex;
-  justify-content: space-between;
+.participants-table th,
+.participants-table td {
+  padding: 10px; /* Padding inside table cells */
+  text-align: left; /* Align text to the left */
+  border: 1px solid #5f5c5c; /* Light gray border for cells */
+  box-shadow: 3px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button-group {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Use flexbox for button layout */
+  justify-content: space-between; /* Space between buttons */
+}
+
+.btn-save,
+.btn-delete {
+  padding: 10px 15px; /* Padding for buttons */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners for buttons */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn-save {
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #218838; /* Green background for save button */
+  color: white; /* White text */
+}
+
+.btn-save:hover {
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #167429; 
+}
+
+.btn-delete {
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: #f44336; /* Red background for delete button */
+  color: white; /* White text */
+}
+
+.btn-delete:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+
+.error-message {
+  color: #f44336; /* Red color for error messages */
+  text-align: center; /* Center the error message */
+  margin-top: 10px; /* Space above error message */
+}
+.btn-add-party {
+  box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
+  background-color: rgb(220, 82, 95) ; /* Green color */
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn-add-party:hover {
+  background-color: rgb(236, 58, 76); /* Darker green on hover */
 }

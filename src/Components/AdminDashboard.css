@@ -1,90 +1,108 @@
-/* src/Components/AdminDashboard.css */
-.admin-dashboard {
+/* Full-page layout and styling */
+#admin-dashboard34 { /* Updated ID */
   display: flex;
   height: 100vh;
-  background-color: #f4f7fc;
+  background-color: rgb(220, 82, 95);
+  font-family: 'Asap', sans-serif;
 }
 
-.sidebar {
+.sidebar11 {
+  position: relative; /* Allows pseudo-elements to stay within sidebar */
   width: 250px;
-  background-color: #2c3e50;
+  height: 97vh;
+  background-color: white;
   padding: 20px;
-  color: #fff;
+  color: #3b4a61;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1; /* Ensures sidebar content is above other elements */
+  overflow: hidden; /* Ensures wave animation is contained */
 }
 
-.sidebar-title {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  font-weight: 600;
-  text-align: center;
+/* Wave animation for the sidebar */
+.sidebar11::before,
+.sidebar11::after {
+  content: '';
+  position: absolute;
+  width: 1400px;
+  height: 1400px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1; /* Places waves behind sidebar content */
+  opacity: 0.6;
 }
 
-.sidebar-menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.sidebar11::before {
+  left: 15px;
+  bottom: -50%;
+  background-color: rgba(69, 105, 144, 0.3);
+  animation: sidebar-waves 8s infinite linear;
 }
 
-.menu-item {
-  margin-bottom: 20px;
+.sidebar11::after {
+  left: 25px;
+  bottom: -20%;
+  background-color: rgba(2, 128, 144, 0.25);
+  animation: sidebar-waves 7s infinite;
 }
 
-.menu-link {
-  display: block;
-  padding: 10px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.1rem;
-  background-color: #34495e;
-  border-radius: 4px;
-  text-align: center;
-  transition: background-color 0.3s ease;
+@keyframes sidebar-waves {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.menu-link:hover {
-  background-color: #1abc9c;
-}
-
-.section-title {
-  font-size: 1.3rem;
-  color: #ecf0f1;
-  margin-bottom: 10px;
-}
-
-.submenu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.submenu-item {
-  margin-bottom: 10px;
-}
-
-.submenu-link {
-  color: #bdc3c7;
-  text-decoration: none;
-  padding-left: 10px;
-  font-size: 1rem;
-  transition: color 0.3s ease;
-}
-
-.submenu-link:hover {
-  color: #1abc9c;
-}
-
-.content {
-  flex: 1;
-  padding: 40px;
-  background-color: #ecf0f1;
-}
-
-h1 {
+#sidebar-title34 { /* Updated ID */
   font-size: 2rem;
   margin-bottom: 20px;
+  font-weight: 600;
+  color: rgb(220, 82, 95);
 }
 
-p {
+/* Sidebar menu styles */
+#sidebar-menu34 { /* Updated ID */
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+#menu-item34 { /* Updated ID */
+  margin-bottom: 20px;
+}
+
+#menu-link34 { /* Updated ID */
+  display: block;
+  padding: 10px;
+  color: black;
+  text-decoration: none;
   font-size: 1.1rem;
-  color: #7f8c8d;
+  background-color: white;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+  position: relative;
+  box-shadow:3px 4px rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Keeps links above animated waves */
+}
+
+#menu-link34:hover { /* Updated ID */
+  background-color: #343536;
+}
+
+/* Content styling */
+#content34 { /* Updated ID */
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.1);
 }

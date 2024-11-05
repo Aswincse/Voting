@@ -186,7 +186,7 @@ function Register() {
               onChange={handleChange}
               required
             />
-            <button type="submit">Register</button>
+            <button type="submit" className="register-button">Register</button>
 
             <div className="toggle-option06">
               <p>Already have an account? <a href="/login" className="toggle-link06">Login</a></p>

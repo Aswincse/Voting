@@ -148,3 +148,26 @@ a.toggle-link06:hover {
   cursor: pointer;
   color: rgb(220, 82, 95);
 }
+
+.register-button {
+  background-color: rgb(244, 91, 105); /* Button background color */
+  color: white; /* Button text color */
+  padding: 12px 20px; /* Padding for top/bottom and left/right */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 16px; /* Font size */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effects */
+}
+
+/* Add hover effect */
+.register-button:hover {
+  background-color: rgb(224, 81, 91); /* Darker shade for hover */
+  transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/* Add focus effect */
+.register-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 5px rgba(244, 91, 105, 0.5); /* Add shadow effect on focus */
+}

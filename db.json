@@ -32,6 +32,18 @@
       "email": "as@g",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "9658",
+      "firstName": "basa",
+      "lastName": "s",
+      "age": "20",
+      "gender": "male",
+      "voterId": "VOTER123d",
+      "mobile": "676767",
+      "email": "b@g",
+      "password": "123",
+      "role": "user"
     }
   ],
   "elections": [
@@ -76,15 +88,39 @@
         },
         {
           "name": "adip",
-          "candidate": "adic"
+          "candidate": "adic",
+          "voteCount": 2
+        },
+        {
+          "name": "gowthp",
+          "candidate": "gowthc"
+        },
+        {
+          "name": "ashp",
+          "candidate": "ashc"
         }
       ],
       "participants": [
-        "3faa",
-        "8f4c",
-        "7c61",
-        "ecb0"
+        "a4e9",
+        "184c",
+        "9658"
       ]
+    },
+    {
+      "id": "735e",
+      "name": "ashvote",
+      "date": "2024-11-30",
+      "parties": [
+        {
+          "name": "ashp",
+          "candidate": "ashc"
+        },
+        {
+          "name": "ravip",
+          "candidate": "ravic"
+        }
+      ],
+      "participants": []
     }
   ],
   "votes": [
@@ -101,6 +137,20 @@
       "electionId": "10e4",
       "party": "akshayp",
       "candidate": "akshayc"
+    },
+    {
+      "id": "f01d",
+      "userId": "184c",
+      "electionId": "10e4",
+      "party": "adip",
+      "candidate": "adic"
+    },
+    {
+      "id": "3f32",
+      "userId": "9658",
+      "electionId": "10e4",
+      "party": "adip",
+      "candidate": "adic"
     }
   ]
 }

@@ -1,10 +1,9 @@
-// src/Components/AdminDashboard.js
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import './AdminDashboard.css';
+import './AdminDashboard.css'; // Updated CSS file name
 
-const AdminDashboard = () => {
+const AdminDashboard = () => { // Updated component name
   const [elections, setElections] = useState([]);
 
   useEffect(() => {
@@ -21,40 +20,45 @@ const AdminDashboard = () => {
   }, []);
 
   return (
-    <div className="admin-dashboard">
-      <aside className="sidebar">
-        <h2 className="sidebar-title">Admin Panel</h2>
-        <ul className="sidebar-menu">
-          <li className="menu-item">
-            <Link to="/create-election" className="menu-link">Create Election</Link>
+    <div id="admin-dashboard34"> {/* Updated ID */}
+      <aside className="sidebar11">
+        <h2 id="sidebar-title34">Admin Panel</h2> {/* Updated ID */}
+        <ul id="sidebar-menu34"> {/* Updated ID */}
+          <li id="menu-item34"> {/* Updated ID */}
+            <Link to="/create-election" id="menu-link34"> {/* Updated ID */}
+              Create Election
+            </Link>
           </li>
-          <li className="menu-item">
-            <h3 className="section-title">Manage Elections</h3>
-            <ul className="submenu">
+          <li id="menu-item34"> {/* Updated ID */}
+            <h3 id="section-title34">Manage Elections</h3> {/* Updated ID */}
+            <ul id="submenu34"> {/* Updated ID */}
               {elections.map((election) => (
-                <li key={election.id} className="submenu-item">
-                  <Link to={`/manage-election/${election.id}`} className="submenu-link">
+                <li key={election.id} id="submenu-item34"> {/* Updated ID */}
+                  <Link to={`/manage-election/${election.id}`} id="submenu-link34"> {/* Updated ID */}
                     {election.name}
                   </Link>
                 </li>
               ))}
             </ul>
           </li>
-          <li className="menu-item">
-            <Link to="/create-user" className="menu-link">Create User</Link>
+          <li id="menu-item34"> {/* Updated ID */}
+            <Link to="/create-user" id="menu-link34"> {/* Updated ID */}
+              Create User
+            </Link>
           </li>
-          <li className="menu-item">
-            <Link to="/view-results" className="menu-link">View Election Results</Link>
+          <li id="menu-item34"> {/* Updated ID */}
+            <Link to="/view-results" id="menu-link34"> {/* Updated ID */}
+              View Election Results
+            </Link>
           </li>
         </ul>
       </aside>
-
-      <main className="content">
-        <h1>Welcome to the Admin Dashboard</h1>
-        <p>Manage elections, create new elections, and oversee ongoing activities.</p>
+      <main id="content34"> {/* Updated ID */}
+        <h1 id="content-title34">Welcome to the Admin Dashboard</h1> {/* Updated ID */}
+        <p id="content-description34">Manage elections, create new elections, and oversee ongoing activities.</p> {/* Updated ID */}
       </main>
     </div>
   );
 };
 
-export default AdminDashboard;
+export default AdminDashboard; // Updated export

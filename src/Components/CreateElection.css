@@ -1,19 +1,65 @@
-/* src/Components/CreateElection.css */
-
-.create-election {
-  max-width: 600px; /* Limit the maximum width of the form */
-  margin: 30px auto; /* Center the form horizontally */
-  padding: 20px; /* Padding around the form */
-  border: 1px solid #ddd; /* Light border */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  background-color: #ffffff; /* White background */
+/* src/Components/CreateElection41.css */
+body {
+  background-color: rgb(220, 82, 95);
 }
 
-.create-election h2 {
-  text-align: center; /* Center the title */
-  color: #333; /* Dark gray color for the title */
-  margin-bottom: 20px; /* Space below the title */
+.create-election41 {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  padding-right: 35px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  position: relative; /* Set relative positioning for the wave animations */
+  z-index: 1; /* Ensure this content is above the wave animations */
+  overflow: hidden;
+}
+
+.create-election41::before,
+.create-election41::after {
+  content: '';
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  border-top-left-radius: 40%;
+  border-top-right-radius: 45%;
+  border-bottom-left-radius: 35%;
+  border-bottom-right-radius: 40%;
+  z-index: -1;
+  opacity: 0.5;
+}
+
+.create-election41::before {
+  top: 20%;
+  left: 80%;
+  background-color: rgba(69, 105, 144, 0.2);
+  transform: translateX(-50%);
+  animation: form-waves 6s infinite linear;
+}
+
+.create-election41::after {
+  top: 45%;
+  left: 75%;
+  background-color: rgba(2, 128, 144, 0.25);
+  transform: translateX(-50%);
+  animation: form-waves 7s infinite;
+}
+
+@keyframes form-waves {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.create-election41 h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .form-group {
@@ -27,8 +73,8 @@
   color: #555; /* Medium gray color for labels */
 }
 
-.create-election input[type="text"],
-.create-election input[type="date"] {
+.create-election41 input[type="text"],
+.create-election41 input[type="date"] {
   width: 100%; /* Full width for input fields */
   padding: 10px; /* Padding inside input fields */
   border: 1px solid #ccc; /* Light border */
@@ -37,8 +83,8 @@
   margin-bottom: 10px; /* Space below each input */
 }
 
-.create-election input[type="text"]:focus,
-.create-election input[type="date"]:focus {
+.create-election41 input[type="text"]:focus,
+.create-election41 input[type="date"]:focus {
   border-color: #007bff; /* Change border color on focus */
   outline: none; /* Remove default outline */
 }
@@ -49,9 +95,9 @@
 
 .add-party-button,
 .submit-button {
-  width: 100%; /* Full width for buttons */
+  width: 103%; /* Full width for buttons */
   padding: 10px; /* Padding inside buttons */
-  background-color: #007bff; /* Bootstrap primary color */
+  background-color: rgb(220, 82, 95); /* Button color */
   color: white; /* White text */
   border: none; /* No border */
   border-radius: 4px; /* Rounded corners */
@@ -63,5 +109,6 @@
 
 .add-party-button:hover,
 .submit-button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: rgb(220, 82, 95);
+  box-shadow: 2px 3px black;  
 }

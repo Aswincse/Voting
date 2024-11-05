@@ -1,3 +1,7 @@
+form {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+}
 .loginbody05 {
   margin: 0;
   font-family: 'Asap', sans-serif;
@@ -141,5 +145,6 @@ a.toggle-link05:hover {
 }
 .register-option05{
   position: relative;
+  margin-top: 40px;
   bottom: 35px;
 }

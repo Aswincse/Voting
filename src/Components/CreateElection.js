@@ -1,4 +1,4 @@
-// src/Components/CreateElection.js
+// src/Components/CreateElection41.js
 import React, { useState } from 'react';
 import axios from 'axios';
 import './CreateElection.css'; // Ensure to import the CSS file
@@ -41,7 +41,7 @@ const CreateElection = () => {
   };
 
   return (
-    <div className="create-election">
+    <div className="create-election41">
       <h2>Create Election</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">

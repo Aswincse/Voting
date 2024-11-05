@@ -8,8 +8,9 @@ import CreateElection from './Components/CreateElection';
 import ManageElectionPage from './Components/ManageElectionPage';
 import CreateUser from './Components/CreateUser';
 import Result from './Components/Result';
+import ResultGraph from './Components/ResultGraph';
 import PrivateRoute from './Components/PrivateRoute';
-import Register from './Components/Register'; // Import Register
+import Register from './Components/Register'; 
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
             <Route path="/manage-election/:electionId" element={<ManageElectionPage />} />
             <Route path="/create-user" element={<CreateUser />} />
             <Route path="/view-results" element={<Result />} />
+            <Route path="/resultgraph" element={<ResultGraph />} />
           </Route>
 
           {/* User routes protected by PrivateRoute */}
