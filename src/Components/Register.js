@@ -61,9 +61,10 @@ function Register() {
       }
     }
 
-    // Create new user object without confirmPassword
+    // Create new user object with an empty 'needs' array
     const { confirmPassword, ...newUser } = formData;
     newUser.role = 'user'; // Set role to 'user' for all registrations
+    newUser.needs = []; // Add empty needs array
 
     try {
       const response = await fetch('http://localhost:8080/users', {

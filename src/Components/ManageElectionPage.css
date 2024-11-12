@@ -1,12 +1,13 @@
 /* src/Components/ManageElectionPage.css */
 
-.manage-election-container {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
+.manage-elections {
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   min-height: 100vh; /* Full viewport height */
-  padding: 20px; /* Padding around the container */
-  background-color: rgb(220, 82, 95); /* Light gray background */
+  padding: 20px;
+  background-color: rgb(220, 82, 95); /* Light pink background */
+  position: relative; /* Make sure waves stay behind content */
 }
 
 .election-card {
@@ -18,12 +19,11 @@
   width: 100%; /* Full width */
   max-width: 600px; /* Maximum width for the card */
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  position: relative; /* Set relative positioning for the wave animations */
+  position: relative;
   z-index: 1; /* Ensure this content is above the wave animations */
-  overflow: hidden;
+  overflow: hidden; /* Prevent overflow */
+  
+  margin:30px auto ;
 }
 
 .election-card::before,
@@ -53,98 +53,110 @@
   left: 125%;
   background-color: rgba(2, 128, 144, 0.25);
   transform: translateX(-50%);
-  animation: form-waves 7s infinite;
+  animation: form-waves 7s infinite linear;
 }
 
+/* Keyframes for wave animation */
+@keyframes form-waves {
+  0% {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  50% {
+    transform: translateX(-50%) rotate(180deg);
+  }
+  100% {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
 
 .header {
-  text-align: center; /* Center the header */
-  color: #333; /* Darker color for the header */
-  margin-bottom: 20px; /* Space below the header */
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .input-group {
-  margin-bottom: 15px; /* Space between input groups */
+  margin-bottom: 15px;
 }
 
 .label {
-  font-weight: bold; /* Bold labels */
-  margin-bottom: 5px; /* Space below labels */
-  display: block; /* Ensure labels are on a new line */
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
 }
 
 .input-field {
-  width: 100%; /* Full width for inputs */
-  padding: 10px; /* Padding inside inputs */
+  width: 100%;
+  padding: 10px;
   margin-right: 50px;
-  border: 1px solid #ddd; /* Light gray border */
-  border-radius: 5px; /* Rounded corners for inputs */
-  transition: border-color 0.3s; /* Smooth transition for border color */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
   box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
 }
 
-
 .input-field:focus {
   border-color: #4CAF50; /* Green border on focus */
-  outline: none; /* Remove default outline */
+  outline: none;
 }
 
 .participants-table {
-  width: 103%; /* Full width for the table */
-  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full width for the table */
+  border-collapse: collapse;
 }
 
 .participants-table th,
 .participants-table td {
-  padding: 10px; /* Padding inside table cells */
-  text-align: left; /* Align text to the left */
-  border: 1px solid #5f5c5c; /* Light gray border for cells */
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #5f5c5c;
   box-shadow: 3px 4px rgba(0, 0, 0, 0.1);
 }
 
 .button-group {
-  display: flex; /* Use flexbox for button layout */
-  justify-content: space-between; /* Space between buttons */
+  display: flex;
+  justify-content: space-between;
 }
 
 .btn-save,
 .btn-delete {
-  padding: 10px 15px; /* Padding for buttons */
-  border: none; /* No border */
-  border-radius: 5px; /* Rounded corners for buttons */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition for background color */
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 .btn-save {
   box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
-  background-color: #218838; /* Green background for save button */
-  color: white; /* White text */
+  background-color: #218838;
+  color: white;
 }
 
 .btn-save:hover {
   box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
-  background-color: #167429; 
+  background-color: #167429;
 }
 
 .btn-delete {
   box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
-  background-color: #f44336; /* Red background for delete button */
-  color: white; /* White text */
+  background-color: #f44336;
+  color: white;
 }
 
 .btn-delete:hover {
-  background-color: #d32f2f; /* Darker red on hover */
+  background-color: #d32f2f;
 }
 
 .error-message {
-  color: #f44336; /* Red color for error messages */
-  text-align: center; /* Center the error message */
-  margin-top: 10px; /* Space above error message */
+  color: #f44336;
+  text-align: center;
+  margin-top: 10px;
 }
+
 .btn-add-party {
   box-shadow: 2px 3px rgba(0, 0, 0, 0.1);
-  background-color: rgb(220, 82, 95) ; /* Green color */
+  background-color: rgb(220, 82, 95);
   color: white;
   padding: 8px 12px;
   border: none;
@@ -154,5 +166,64 @@
 }
 
 .btn-add-party:hover {
-  background-color: rgb(236, 58, 76); /* Darker green on hover */
+  background-color: rgb(236, 58, 76);
+}
+
+.election-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.election-container select {
+  padding: 10px;
+  width: 50%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.election-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.election-container h4 {
+  margin-top: 20px;
+}
+
+.election-container .party-section,
+.election-container .promises-section {
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+
+.election-container .party-section input,
+.election-container .promises-section input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+.election-container .party-section button,
+.election-container .promises-section button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.election-container .party-section button:hover,
+.election-container .promises-section button:hover {
+  background-color: #45a049;
 }

@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate, useParams } from 'react-router-dom';
+import MatchScore from './MatchScore'; // Import the MatchScore component
 import './VotingPage.css';
 
 const VotingPage = () => {
   const [election, setElection] = useState(null);
   const [voteSubmitted, setVoteSubmitted] = useState(false);
   const [userVotes, setUserVotes] = useState([]);
+  const [loading, setLoading] = useState(true); // Add loading state
+  const [userNeeds, setUserNeeds] = useState([]); // Default to an empty array
   const user = JSON.parse(localStorage.getItem('user')); // Get the logged-in user from local storage
   const navigate = useNavigate();
   const { electionId } = useParams(); // Extract electionId from the URL
@@ -14,7 +17,6 @@ const VotingPage = () => {
   useEffect(() => {
     const fetchElection = async () => {
       try {
-        // Fetch the specific election using the electionId from the URL
         const response = await axios.get(`http://localhost:8080/elections/${electionId}`);
         setElection(response.data);
       } catch (error) {
@@ -32,8 +34,22 @@ const VotingPage = () => {
       }
     };
 
+    // Fetch user profile data to set userNeeds (if applicable)
+    const fetchUserProfile = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8080/users/${user.id}`);
+        setUserNeeds(response.data.needs); // Assuming the user profile has a `needs` field
+      } catch (error) {
+        console.error('Error fetching user profile:', error);
+      }
+    };
+
+    // Fetch data
     fetchElection();
     fetchUserVotes();
+    fetchUserProfile();
+
+    setLoading(false); // Set loading to false when data is fetched
   }, [electionId, user.id]);
 
   const hasVoted = () => {
@@ -47,20 +63,15 @@ const VotingPage = () => {
     }
 
     try {
-      // Update the party's vote count in the election
       const updatedParties = election.parties.map((party) => {
-        if (party.name === partyName) {
+        if (party.partyName === partyName) {
           return { ...party, voteCount: (party.voteCount || 0) + 1 };
         }
         return party;
       });
 
-      // Update the election with the new vote count
-      await axios.patch(`http://localhost:8080/elections/${electionId}`, {
-        parties: updatedParties,
-      });
+      await axios.patch(`http://localhost:8080/elections/${electionId}`, { parties: updatedParties });
 
-      // Record the vote in the /votes endpoint
       await axios.post('http://localhost:8080/votes', {
         userId: user.id,
         electionId: electionId,
@@ -81,10 +92,14 @@ const VotingPage = () => {
     }
   };
 
+  if (loading) {
+    return <div>Loading election and vote data...</div>; // Handle loading state
+  }
+
   return (
-    <div className="voting-page-body09">
-      <div className="voting-page-container09">
-        <h2 className="voting-page-title09">Voting Page</h2>
+    <div className="voting-page-body89">
+      <div className="voting-page-container89">
+        <h2 className="voting-page-title89">Voting Page</h2>
         {election ? (
           <div>
             <h3>{election.name}</h3>
@@ -93,15 +108,28 @@ const VotingPage = () => {
             {hasVoted() ? (
               <p>Already voted, thank you!</p>
             ) : (
-              <ul className="party-list09">
-                {election.parties.map((party) => (
-                  <li key={party.name} className="party-option09">
-                    <strong>{party.name}</strong> - Candidate: {party.candidate}
-                    <button onClick={() => handleVote(party.name, party.candidate)} className="vote-button09">
-                      Vote
-                    </button>
-                  </li>
-                ))}
+              <ul className="party-list89">
+                {election.parties && election.parties.length > 0 ? (
+                  election.parties.map((party) => (
+                    <li key={party.partyName} className="party-option89">
+                      <strong>{party.partyName}</strong> - Candidate: {party.candidateName} 
+                      <div className="candidate-score">
+                        <MatchScore 
+                          promises={party.promises} // Pass the promises of the party
+                          userNeeds={userNeeds} // Pass the user's needs
+                        />
+                      </div>
+                      <button 
+                        onClick={() => handleVote(party.partyName, party.candidateName)} 
+                        className="vote-button89"
+                      >
+                        Vote
+                      </button>
+                    </li>
+                  ))
+                ) : (
+                  <p>No parties available.</p>
+                )}
               </ul>
             )}
           </div>

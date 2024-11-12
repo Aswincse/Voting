@@ -11,6 +11,7 @@ import Result from './Components/Result';
 import ResultGraph from './Components/ResultGraph';
 import PrivateRoute from './Components/PrivateRoute';
 import Register from './Components/Register'; 
+import NeedsForm from './Components/NeedsForm'
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route element={<PrivateRoute role="user" />}>
             <Route path="/vote/:electionId" element={<VotingPage />} />
             <Route path="/userdashboard" element={<UserDashboard />} />
+            <Route path="/needsform/:userId/:electionId" element={<NeedsForm />} />
           </Route>
 
           {/* Default route - Redirect to login */}

@@ -1,0 +1,149 @@
+/* General Styles for NeedsForm Component */
+.needs-form-container89 {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+h2 {
+  font-size: 18px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Styles for Input Section */
+.needs-input89 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.needs-input89 input {
+  padding: 10px;
+  font-size: 16px;
+  width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin-right: 10px;
+  outline: none;
+}
+
+.needs-input89 input:focus {
+  border-color: #4CAF50;
+}
+
+.needs-input89 button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.needs-input89 button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for Needs List */
+.needs-list89 {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.needs-list89 h3 {
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.needs-list89 ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.needs-list89 li {
+  font-size: 16px;
+  padding: 8px;
+  background-color: #f2f2f2;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+/* Styles for Save and Skip Buttons */
+.save-needs-button89, .skip-button89 {
+  padding: 12px 24px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.save-needs-button89:hover, .skip-button89:hover {
+  background-color: #45a049;
+}
+
+.skip-button89 {
+  background-color: #f44336;
+}
+
+.skip-button89:hover {
+  background-color: #e53935;
+}
+
+/* Styles for Success Popup */
+.success-popup89 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content89 {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup-content89 h2 {
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+.popup-content89 button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup-content89 button:hover {
+  background-color: #45a049;
+}

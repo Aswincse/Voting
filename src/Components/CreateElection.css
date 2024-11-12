@@ -1,9 +1,8 @@
-/* src/Components/CreateElection41.css */
 body {
   background-color: rgb(220, 82, 95);
 }
-
-.create-election41 {
+.create-election78 {
+  background-color: rgb(220, 82, 95);
   max-width: 600px;
   margin: 30px auto;
   padding: 20px;
@@ -12,13 +11,13 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
-  position: relative; /* Set relative positioning for the wave animations */
-  z-index: 1; /* Ensure this content is above the wave animations */
+  position: relative;
+  z-index: 1;
   overflow: hidden;
 }
 
-.create-election41::before,
-.create-election41::after {
+.create-election78::before,
+.create-election78::after {
   content: '';
   position: absolute;
   width: 1000px;
@@ -31,23 +30,23 @@ body {
   opacity: 0.5;
 }
 
-.create-election41::before {
+.create-election78::before {
   top: 20%;
   left: 80%;
   background-color: rgba(69, 105, 144, 0.2);
   transform: translateX(-50%);
-  animation: form-waves 6s infinite linear;
+  animation: form-waves78 6s infinite linear;
 }
 
-.create-election41::after {
+.create-election78::after {
   top: 45%;
   left: 75%;
   background-color: rgba(2, 128, 144, 0.25);
   transform: translateX(-50%);
-  animation: form-waves 7s infinite;
+  animation: form-waves78 7s infinite;
 }
 
-@keyframes form-waves {
+@keyframes form-waves78 {
   from {
     transform: translateX(-50%) rotate(0deg);
   }
@@ -56,59 +55,151 @@ body {
   }
 }
 
-.create-election41 h2 {
+.create-election78 h2 {
   text-align: center;
   color: #333;
   margin-bottom: 20px;
 }
 
-.form-group {
-  margin-bottom: 15px; /* Space below each form group */
+.create-election78 .form-group78 {
+  margin-bottom: 15px;
 }
 
-.form-group label {
-  display: block; /* Each label on a new line */
-  margin-bottom: 5px; /* Space below the label */
-  font-weight: bold; /* Bold text for labels */
-  color: #555; /* Medium gray color for labels */
+.create-election78 .form-group78 label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
 }
 
-.create-election41 input[type="text"],
-.create-election41 input[type="date"] {
-  width: 100%; /* Full width for input fields */
-  padding: 10px; /* Padding inside input fields */
-  border: 1px solid #ccc; /* Light border */
-  border-radius: 4px; /* Slightly rounded corners */
-  font-size: 16px; /* Increase font size */
-  margin-bottom: 10px; /* Space below each input */
+.create-election78 input[type="text"],
+.create-election78 input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
 
-.create-election41 input[type="text"]:focus,
-.create-election41 input[type="date"]:focus {
-  border-color: #007bff; /* Change border color on focus */
-  outline: none; /* Remove default outline */
+.create-election78 input[type="text"]:focus,
+.create-election78 input[type="date"]:focus {
+  border-color: #007bff;
+  outline: none;
 }
 
-.party-group {
-  margin-bottom: 15px; /* Space between party entries */
+.create-election78 .party-group78 {
+  margin-bottom: 15px;
 }
 
-.add-party-button,
-.submit-button {
-  width: 103%; /* Full width for buttons */
-  padding: 10px; /* Padding inside buttons */
-  background-color: rgb(220, 82, 95); /* Button color */
-  color: white; /* White text */
-  border: none; /* No border */
-  border-radius: 4px; /* Rounded corners */
-  font-size: 16px; /* Increase font size */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background-color 0.3s; /* Smooth transition for background color */
-  margin-top: 10px; /* Space above the button */
-}
-
-.add-party-button:hover,
-.submit-button:hover {
+.create-election78 .add-party-button78,
+.create-election78 .submit-button78 {
+  width: 103%;
+  padding: 10px;
   background-color: rgb(220, 82, 95);
-  box-shadow: 2px 3px black;  
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+.create-election78 .add-party-button78:hover,
+.create-election78 .submit-button78:hover {
+  background-color: rgb(220, 82, 95);
+  box-shadow: 2px 3px black;
+}
+
+.create-election78 .remove-promise-button78 {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.create-election78 .remove-promise-button78:hover {
+  background-color: darkred;
+}
+
+.create-election78 .add-promise-button78 {
+  background-color: green;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.create-election78 .add-promise-button78:hover {
+  background-color: darkgreen;
+}
+/* Add Promise Button */
+.add-promise-button78 {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.add-promise-button78:hover {
+  background-color: #0056b3;
+}
+
+/* Remove Promise Button */
+.remove-promise-button78 {
+  background-color: #f44336;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.remove-promise-button78:hover {
+  background-color: #d32f2f;
+}
+
+/* Category Dropdown */
+select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Category Input for Other Selection */
+input[type="text"] {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #007bff;
 }

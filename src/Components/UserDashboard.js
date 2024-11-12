@@ -31,7 +31,7 @@ const UserDashboard = () => {
   };
 
   const handleVoteNow = (electionId) => {
-    navigate(`/vote/${electionId}`);
+    navigate(`/needsform/${userId}/${electionId}`);
   };
 
   return (

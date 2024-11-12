@@ -19,7 +19,15 @@
       "email": "h1@g",
       "password": "123",
       "confirmPassword": "123",
-      "role": "user"
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "764f",
+          "needs": [
+            "free education"
+          ]
+        }
+      ]
     },
     {
       "id": "184c",
@@ -31,103 +39,262 @@
       "mobile": "48851",
       "email": "as@g",
       "password": "123",
-      "role": "user"
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "6c12",
+          "needs": []
+        },
+        {
+          "electionId": "cf30",
+          "needs": []
+        }
+      ]
     },
     {
-      "id": "9658",
+      "id": "e58d",
       "firstName": "basa",
+      "lastName": "n",
+      "age": "20",
+      "gender": "male",
+      "voterId": "VOTER1231ko",
+      "mobile": "8511",
+      "email": "b@g",
+      "password": "123",
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "6c12",
+          "needs": []
+        },
+        {
+          "electionId": "764f",
+          "needs": [
+            "free education"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "441d",
+      "firstName": "ak",
       "lastName": "s",
       "age": "20",
       "gender": "male",
-      "voterId": "VOTER123d",
-      "mobile": "676767",
-      "email": "b@g",
+      "voterId": "VOTER1232222",
+      "mobile": "22222",
+      "email": "ak@g",
       "password": "123",
       "role": "user"
+    },
+    {
+      "id": "658e",
+      "firstName": "ad",
+      "lastName": "ak",
+      "age": "20",
+      "gender": "male",
+      "voterId": "VOTER1234Asw",
+      "mobile": "4545",
+      "email": "ad@g",
+      "password": "123",
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "cf30",
+          "needs": []
+        }
+      ]
+    },
+    {
+      "id": "d7c0",
+      "firstName": "se",
+      "lastName": "er",
+      "age": "23",
+      "gender": "male",
+      "voterId": "VOTER12334r",
+      "mobile": "2323",
+      "email": "d@g",
+      "password": "123",
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "cf30",
+          "needs": []
+        }
+      ]
+    },
+    {
+      "id": "6ec9",
+      "firstName": "df",
+      "lastName": "df",
+      "age": "23",
+      "gender": "female",
+      "voterId": "VOTER123wes",
+      "mobile": "444332",
+      "email": "d1@g",
+      "password": "123",
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "6c12",
+          "needs": []
+        }
+      ]
+    },
+    {
+      "id": "727c",
+      "firstName": "werik",
+      "lastName": "s",
+      "age": "20",
+      "gender": "male",
+      "voterId": "VOTER123rt",
+      "mobile": "877",
+      "email": "w@g",
+      "password": "123",
+      "role": "user",
+      "needs": []
+    },
+    {
+      "id": "a95a",
+      "firstName": "deepak",
+      "lastName": "loe",
+      "age": "20",
+      "gender": "male",
+      "voterId": "VOTER123deep",
+      "mobile": "3445567",
+      "email": "dpk@g",
+      "password": "123",
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "764f",
+          "needs": [
+            "free education",
+            "free healthcare",
+            "Increase jobs"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "5656",
+      "firstName": "harish",
+      "lastName": "rag",
+      "age": "30",
+      "gender": "male",
+      "voterId": "VOTER1234rag",
+      "mobile": "22111",
+      "email": "rag@g",
+      "password": "123",
+      "role": "user",
+      "needs": [
+        {
+          "electionId": "764f",
+          "needs": [
+            "increase jobs"
+          ]
+        },
+        {
+          "electionId": "8825",
+          "needs": [
+            "free healthcare"
+          ]
+        }
+      ]
     }
   ],
   "elections": [
     {
-      "id": "6c12",
-      "name": "adivote",
-      "date": "2024-10-03",
+      "id": "764f",
+      "name": "Assembly tamilnadu2",
+      "date": "2024-11-30",
       "parties": [
         {
-          "name": "adip",
-          "candidate": "adic",
-          "voteCount": 0
+          "partyName": "DMK",
+          "candidateName": "Stalin",
+          "promises": [
+            {
+              "category": "Education",
+              "promise": "free education",
+              "customCategory": ""
+            }
+          ],
+          "voteCount": 4
         },
         {
-          "name": "adi2p",
-          "candidate": "adi2def",
-          "voteCount": 0
-        },
-        {
-          "name": "er3",
-          "candidate": "er3i",
-          "voteCount": 1
+          "partyName": "TVK",
+          "candidateName": "Vijay",
+          "promises": [
+            {
+              "category": "Education",
+              "promise": "free education",
+              "customCategory": ""
+            },
+            {
+              "category": "Healthcare",
+              "promise": "free healthcare",
+              "customCategory": ""
+            },
+            {
+              "category": "Economy",
+              "promise": "Increase jobs",
+              "customCategory": ""
+            }
+          ],
+          "voteCount": 2
         }
       ],
       "participants": [
-        "c469"
+        "5656"
       ]
     },
     {
-      "id": "10e4",
-      "name": "akshayvote",
-      "date": "2024-11-08",
+      "id": "8825",
+      "name": "election 2026 pre polls",
+      "date": "2024-11-07",
       "parties": [
         {
-          "name": "harishp",
-          "candidate": "harishc"
+          "partyName": "DMK",
+          "candidateName": "Stalin",
+          "promises": [
+            {
+              "category": "Education",
+              "promise": "free education",
+              "customCategory": ""
+            }
+          ]
         },
         {
-          "name": "akshayp",
-          "candidate": "akshayc",
-          "voteCount": 1
-        },
-        {
-          "name": "adip",
-          "candidate": "adic",
-          "voteCount": 2
-        },
-        {
-          "name": "gowthp",
-          "candidate": "gowthc"
-        },
-        {
-          "name": "ashp",
-          "candidate": "ashc"
+          "partyName": "TVK",
+          "candidateName": "Vijay",
+          "promises": [
+            {
+              "category": "Healthcare",
+              "promise": "free healthcare",
+              "customCategory": ""
+            }
+          ]
         }
       ],
       "participants": [
         "a4e9",
         "184c",
-        "9658"
+        "e58d",
+        "441d",
+        "658e",
+        "d7c0",
+        "6ec9",
+        "727c",
+        "a95a",
+        "5656"
       ]
-    },
-    {
-      "id": "735e",
-      "name": "ashvote",
-      "date": "2024-11-30",
-      "parties": [
-        {
-          "name": "ashp",
-          "candidate": "ashc"
-        },
-        {
-          "name": "ravip",
-          "candidate": "ravic"
-        }
-      ],
-      "participants": []
     }
   ],
   "votes": [
     {
       "id": "a5fd",
       "userId": "c469",
-      "electionId": "6c12",
+      "electionId": null,
       "party": "er3",
       "candidate": "er3i"
     },
@@ -139,18 +306,62 @@
       "candidate": "akshayc"
     },
     {
-      "id": "f01d",
+      "id": "d7dc",
+      "userId": "658e",
+      "electionId": "cf30",
+      "party": "as2",
+      "candidate": "as3"
+    },
+    {
+      "id": "3022",
+      "userId": "d7c0",
+      "electionId": "cf30",
+      "party": "as2",
+      "candidate": "as3"
+    },
+    {
+      "id": "1a5f",
       "userId": "184c",
-      "electionId": "10e4",
+      "electionId": null,
+      "candidate": "adic"
+    },
+    {
+      "id": "35e1",
+      "userId": "6ec9",
+      "electionId": null,
       "party": "adip",
       "candidate": "adic"
     },
     {
-      "id": "3f32",
-      "userId": "9658",
-      "electionId": "10e4",
-      "party": "adip",
-      "candidate": "adic"
+      "id": "a709",
+      "userId": "727c",
+      "electionId": "cf30",
+      "party": "as2",
+      "candidate": "as3"
+    },
+    {
+      "id": "a992",
+      "userId": "a95a",
+      "electionId": "764f"
+    },
+    {
+      "id": "a552",
+      "userId": "184c",
+      "electionId": "764f"
+    },
+    {
+      "id": "bc18",
+      "userId": "a4e9",
+      "electionId": "764f",
+      "party": "DMK",
+      "candidate": "Stalin"
+    },
+    {
+      "id": "41c7",
+      "userId": "e58d",
+      "electionId": "764f",
+      "party": "DMK",
+      "candidate": "Stalin"
     }
   ]
 }
